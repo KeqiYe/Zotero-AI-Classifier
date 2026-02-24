@@ -41,7 +41,7 @@ Before using the AI features, please configure your API:
 3. **One-Click Classification**: Select the papers you want to classify in the main interface (multi-selection supported), click `Core: Smart Classification (Real-time Log)`, and the AI will automatically analyze and place the papers into the correct subfolders. Detailed local logs are provided for all operations.
 
 ### 👨‍💻 About the Author & License
-This project is developed by **[Yekeqi](https://github.com/yekeqi)**.
+This project is developed by **[Yeke qi](https://github.com/KeqiYe)**.
 If this plugin saves you time in your research and literature management, please give it a ⭐ Star on GitHub! Your support is my greatest motivation to keep updating.
 
 This project is licensed under the [MIT License](LICENSE).
@@ -86,7 +86,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ### 👨‍💻 关于作者与开源协议
 
-本项目由 **[Yekeqi](https://github.com/yekeqi)** 开发。
+本项目由 **[Yeke qi](https://github.com/KeqiYe)**. 开发。
 如果这个插件帮您在科研与文献管理中节省了时间，欢迎在右上角点个 ⭐ Star！您的支持是我持续更新的最大动力。
 
 * **反馈与建议**: 欢迎提交 Issue 或 Pull Request。
