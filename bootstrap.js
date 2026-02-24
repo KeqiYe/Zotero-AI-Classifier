@@ -1,5 +1,4 @@
-// Zotero AI Manager - Bootstrap.js (功能增强版)
-// =========================================================================
+
 
 var zoteroAIPlugin;
 const sleep = ms => new Promise(r => setTimeout(r, ms));
@@ -243,7 +242,6 @@ class ZoteroAI_Plugin {
         const traverse = (col, currentPath) => {
             let fullPath = currentPath ? (currentPath + " / " + col.name) : col.name;
             
-            // 【关键调用】获取当前集合的子集合
             // Zotero 的 Collection 对象通常有这个方法，或者通过 ID 查找
             let children = col.getChildCollections(); 
             
@@ -865,4 +863,5 @@ async function startup({ id, version, resourceURI, rootURI }) {
 }
 function shutdown() {
     if (zoteroAIPlugin && zoteroAIPlugin.mainMenu) zoteroAIPlugin.mainMenu.remove();
+
 }
