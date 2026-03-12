@@ -1,4 +1,4 @@
-# 📚 Zotero AI Classifier
+# AI Classifier
 
 [English](#english-version) | [中文](#中文版)
 
@@ -6,89 +6,147 @@
 
 ## <a id="english-version"></a> English Version
 
-**Zotero AI Classifier** is a powerful AI-assisted plugin designed for Zotero users. It extracts massive feature signals from your library, utilizes Large Language Models (LLM) to automatically build a rigorous hierarchical academic directory, and enables intelligent, batch classification of your papers.
+**AI Classifier** is a powerful AI-assisted plugin for Zotero. It enables intelligent batch classification of your papers with customizable prompts and provides comprehensive structure management features.
 
-Say goodbye to manual drag-and-drop, and let AI be your exclusive academic archivist!
+### Core Features
 
-### ✨ Core Features
+* **📂 Intelligent Classification**: AI reads paper titles, abstracts, and keywords, automatically categorizing them into folders based on configurable confidence thresholds
+* **💾 Save/Restore Structure**: Save your current classification structure to backup, restore anytime
+* **📤 Export Data**: Export paper titles, abstracts, or keywords to JSON
+* **📥 Import Hierarchy**: Import folder structure from TXT file (clears existing)
+* **🛑 Stop Classification**: Stop ongoing classification tasks at any time
+* **🛡️ Privacy-First**: API Key saved locally, never uploaded to any server
 
-* **🧠 Smart Directory Tree Generation**: Automatically extracts keyword features from your entire library and uses AI reasoning to generate a professional hierarchical directory with "vertical logic and horizontal mutual exclusivity" (supports custom multi-level depth).
-* **📂 Automated Paper Classification**: Based on a multi-label classification mechanism, the AI reads the title, abstract, and keywords of the papers. Combined with a confidence threshold, it automatically and accurately places papers into the corresponding leaf node folders.
-* **📊 Metadata & Structure Export**: Supports one-click export of paper metadata (JSON), library keywords (TXT), and directory tree structures, facilitating secondary academic data analysis.
-* **🛡️ Privacy-First Local Operation**: Your API Key is saved strictly in your local Zotero data directory and will NEVER be uploaded to any third-party servers.
+### Menu Structure
 
-### 📦 Installation
+```
+AI Classifier
+├── Set Log File Location
+├── ─────────────────
+├── Export: All Titles (JSON)
+├── Export: All Abstracts (JSON)
+├── Export: All Keywords (JSON)
+├── ─────────────────
+├── Save Current Structure
+├── Restore Structure
+├── Import Hierarchy from TXT
+├── ─────────────────
+├── LLM Model Classification
+├── Stop Current Classification
+├── Log Viewer
+├── ─────────────────
+└── Settings
+    ├── API Configuration
+    ├── Chat Test
+    └── Prompt Configuration
+```
 
-1. Go to the [Releases](#) page and download the latest `zotero-ai-classifier.xpi` file.
-2. Open Zotero, click on `Tools` -> `Add-ons` in the top menu bar.
-3. Click the gear ⚙️ icon in the top right corner and select `Install Add-on From File...`.
-4. Select the downloaded `.xpi` file and restart Zotero as prompted.
+### Installation
 
-### ⚙️ Configuration
+1. Download the latest `.xpi` file from Releases
+2. Open Zotero, click `Tools` → `Add-ons`
+3. Click the gear icon → `Install Add-on From File...`
+4. Select the `.xpi` file and restart Zotero
 
-Before using the AI features, please configure your API:
-1. In the Zotero top menu bar, click `Tools` -> `Zotero AI` -> `Settings: API Parameters & Connection Test`.
-2. Enter your LLM interface information (e.g., SiliconFlow, OpenAI, or compatible formats):
+### Configuration
+
+1. Click `Tools` → `AI Classifier` → `Set Log File Location` to configure log saving path
+2. Click `Tools` → `AI Classifier` → `Settings` → `API Configuration`
+3. Enter your LLM API info (SiliconFlow, OpenAI, etc.):
    * **API URL**: e.g., `https://api.siliconflow.cn/v1/chat/completions`
-   * **API Key**: Your exclusive secret key.
+   * **API Key**: Your secret key
    * **Model Name**: e.g., `Qwen/Qwen2.5-7B-Instruct`
-3. Click **🔌 Test Connection**, and click Save after confirming it is successful.
+4. Click `Test Connection`, then save
 
-### 🚀 Quick Start
+### Quick Start
 
-1. **Extract & Build**: Click `Zotero AI` -> `AI: Generate Hierarchy from Keywords`, input the maximum depth as prompted, and the plugin will generate the best directory scheme in the background and save it as a TXT file.
-2. **Rebuild Library**: After confirming the generated TXT structure is correct, use `Danger: Clear and Rebuild Directory from TXT` to import it into the Zotero left sidebar (Note: This will clear old folder structures but will NOT delete papers).
-3. **One-Click Classification**: Select the papers you want to classify in the main interface (multi-selection supported), click `Core: Smart Classification (Real-time Log)`, and the AI will automatically analyze and place the papers into the correct subfolders. Detailed local logs are provided for all operations.
-
-### 👨‍💻 About the Author & License
-This project is developed by **[Yeke qi](https://github.com/KeqiYe)**.
-If this plugin saves you time in your research and literature management, please give it a ⭐ Star on GitHub! Your support is my greatest motivation to keep updating.
-
-This project is licensed under the [MIT License](LICENSE).
+1. **Create Hierarchy**: Create a TXT file with hierarchical structure (e.g., `1. Physics`, `1.1 Astrophysics`)
+2. **Import**: Click `Import Hierarchy from TXT` to create folders
+3. **Classify**: Select papers, click `LLM Model Classification`, choose target paths and set threshold
+4. **Backup**: Click `Save Current Structure` to backup before major changes
+5. **Stop**: Click `Stop Current Classification` to halt the task at any time
 
 ---
 
 ## <a id="中文版"></a> 中文版
 
-**Zotero AI Classifier** 是一款为 Zotero 用户打造的强力 AI 辅助插件。它能够提取你文库中的海量特征信号，利用大语言模型（LLM）自动构建严谨的学科层级目录，并实现文献的批量智能归类。
+**AI Classifier** 是一款为 Zotero 打造的强力 AI 辅助插件。支持可定制提示词的智能批量分类，提供完善的目录结构管理功能。
 
-告别手动拖拽，让 AI 成为你的专属学术档案管理员！
+### 核心功能
 
-### ✨ 核心功能
+* **📂 智能归类**：AI 阅读文献标题、摘要、关键词，按可配置置信度阈值自动归类
+* **💾 保存/恢复结构**：保存当前分类结构备份，随时恢复
+* **📤 导出数据**：导出文献标题、摘要或关键词为 JSON
+* **📥 导入层级**：从 TXT 文件导入目录结构（清空现有）
+* **🛑 停止归类**：随时中断正在进行的归类任务
+* **🛡️ 隐私优先**：API Key 仅保存在本地
 
-* **🧠 智能目录树生成**：自动提取全库文献的关键词特征，通过 AI 推理生成具备“纵向逻辑与横向互斥”的专业学科层级目录（支持多级深度自定义）。
-* **📂 自动化文献分类**：基于多标签分类机制，AI 会阅读文献的标题、摘要与关键词，结合置信度阈值，自动将文献精准投放至对应的叶子节点文件夹。
-* **📊 元数据与结构导出**：支持一键导出文献元数据 (JSON)、全库关键词 (TXT) 以及目录树结构，方便进行二次学术数据分析。
-* **🛡️ 隐私优先的本地运行**：您的 API Key 仅保存在 Zotero 本地数据目录中，绝不会上传至任何第三方服务器。
+### 菜单结构
 
-### 📦 安装说明
+```
+AI Classifier
+├── 设置日志保存位置
+├── ─────────────────
+├── 导出：全库标题 (JSON)
+├── 导出：全库摘要 (JSON)
+├── 导出：全库关键词 (JSON)
+├── ─────────────────
+├── 保存当前分类结构
+├── 恢复分类结构
+├── 从 TXT 导入层级（清空重建）
+├── ─────────────────
+├── LLM 模型文献归类
+├── 停止当前归类任务
+├── 日志查看器
+├── ─────────────────
+└── 设置
+    ├── API 参数配置
+    ├── 对话测试
+    └── 提示词配置
+```
 
-1.  前往 [Releases](#) 页面下载最新版本的 `zotero-ai-classifier.xpi` 文件。
-2.  打开 Zotero，点击顶部菜单栏的 `工具 (Tools)` -> `附加组件 (Add-ons)`。
-3.  点击右上角的齿轮 ⚙️ 图标，选择 `Install Add-on From File... (从文件安装附加组件)`。
-4.  选中下载的 `.xpi` 文件，按提示重启 Zotero 即可完成安装。
+### 安装说明
 
-### ⚙️ 配置指南
+1. 前往 Releases 下载最新 `.xpi` 文件
+2. 打开 Zotero，点击 `工具` → `附加组件`
+3. 点击齿轮图标 → `从文件安装附加组件`
+4. 选中 `.xpi` 文件，重启 Zotero
 
-在使用 AI 功能前，请先配置您的 API：
-1. 在 Zotero 顶部菜单栏点击 `工具` -> `Zotero AI` -> `设置：API 参数与连接测试`。
-2. 填入您使用的 LLM 接口信息（如 SiliconFlow, OpenAI 等兼容格式）：
+### 配置指南
+
+1. 点击 `工具` → `AI Classifier` → `设置日志保存位置` 配置日志保存路径
+2. 点击 `工具` → `AI Classifier` → `设置` → `API 参数配置`
+3. 填入 LLM 接口信息（如 SiliconFlow, OpenAI 等）：
    * **API URL**: 例如 `https://api.siliconflow.cn/v1/chat/completions`
    * **API Key**: 您的专属密钥
    * **Model Name**: 例如 `Qwen/Qwen2.5-7B-Instruct`
-3. 点击 **🔌 测试连接**，确认无误后点击保存。
+4. 点击 `测试连接`，确认后保存
 
-### 🚀 快速上手
+### 快速上手
 
-1. **提取与构建**：点击 `Zotero AI` -> `AI：基于关键词生成层级结构`，按提示输入最大深度，插件将在后台生成最佳目录方案并保存为 TXT。
-2. **重构文库**：确认生成的 TXT 结构无误后，使用 `危险：清空并根据TXT重构目录` 将其导入到 Zotero 左侧边栏（注意：此操作会清空旧文件夹结构，但不会删除文献）。
-3. **一键归类**：在主界面选中需要归类的文献（支持多选），点击 `核心：智能归类 (实时日志)`，AI 将自动分析并将文献归入正确的子文件夹中。所有操作均提供详细的本地日志记录。
+1. **创建层级**：创建 TXT 文件，包含层级结构（如 `1. Physics`, `1.1 Astrophysics`）
+2. **导入目录**：点击 `从 TXT 导入层级` 创建文件夹
+3. **智能归类**：选中文献，点击 `LLM 模型文献归类`，选择目标路径并设置置信度阈值
+4. **备份**：重要操作前点击 `保存当前分类结构` 备份
+5. **停止**：点击 `停止当前归类任务` 可随时中断任务
 
-### 👨‍💻 关于作者与开源协议
+### 配置文件位置
 
-本项目由 **[Yeke qi](https://github.com/KeqiYe)**. 开发。
-如果这个插件帮您在科研与文献管理中节省了时间，欢迎在右上角点个 ⭐ Star！您的支持是我持续更新的最大动力。
+配置文件保存在 Zotero 数据目录中：
 
-* **反馈与建议**: 欢迎提交 Issue 或 Pull Request。
+| 文件 | 说明 |
+|------|------|
+| `zotero_ai_config.json` | API Key、模型、日志路径、提示词等配置 |
 
-本项目基于 [MIT License](LICENSE) 开源。
+**配置文件路径**：
+- Windows: `%APPDATA%\Zotero\zotero_ai_config.json`
+- macOS: `~/Library/Application Support/Zotero/zotero_ai_config.json`
+- Linux: `~/.config/zotero/zotero_ai_config.json`
+
+---
+
+### 关于作者
+
+本项目由 **[Yeke qi](https://github.com/KeqiYe)** 开发。
+
+基于 [MIT License](LICENSE) 开源。

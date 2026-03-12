@@ -1,15 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "Zotero AI Classifier",
+  "name": "AI Classifier",
   "version": "1.0.0",
-  "description": "基于 AI 驱动的 Zotero 文献自动分类与目录树生成工具",
-  "author": "Yekeqi",
-  "homepage_url": "https://github.com/yekeqi/zotero-ai-classifier",
+  "description": "使用 LLM API 对 Zotero 文献进行智能分类",
+  "author": "KeqiYe",
+  "homepage_url": "https://github.com/KeqiYe/Zotero-AI-Classifier",
   "applications": {
     "zotero": {
-      "id": "zotero-ai-classifier@yekeqi.github.io",
-      "strict_min_version": "6.0.0",
-      "strict_max_version": "7.0.*"
+      "id": "zotero-ai-classifier@KeqiYe.io",
+      "strict_min_version": "7.0",
+      "strict_max_version": "8.0.*",
+      "update_url": "https://github.com/KeqiYe/Zotero-AI-Classifier"
     }
   }
 }
